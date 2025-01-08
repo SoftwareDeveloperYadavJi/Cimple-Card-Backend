@@ -277,6 +277,12 @@ export const getCardDetails: any = async (req: Request, res: Response) => {
             : {},
           publicId ? { userId: user?.id } : {},
         ],
+      },include: {
+        services: true,
+        testimonials: true,
+        companySocialMediaLink: true,
+        SocialMediaLink: true,
+        businessHours: true,
       },
     });
 
